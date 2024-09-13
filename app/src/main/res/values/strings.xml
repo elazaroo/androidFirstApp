@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">androidFirstApp</string>
+    <string name="registerCaps">REGISTER</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="register">Register</string>
+    <string name="i_already_have_an_account">I already have an account</string>
 </resources>
