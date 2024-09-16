@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
 {
-    private EditText etPassword,etRePassword;
+    private EditText etPassword, etRePassword, etEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -27,29 +27,47 @@ public class MainActivity extends AppCompatActivity
 
             etPassword = findViewById(R.id.etPassword);
             etRePassword = findViewById(R.id.etRePassword);
+            etEmail = findViewById(R.id.etEmail);
             return insets;
         });
     }
 
     public void verify(View v)
     {
+        String email = etEmail.getText().toString();
         String pass = etPassword.getText().toString();
-        if (pass.length()==0) {
-            Toast notificacion= Toast.makeText(this,"Password can't be empty", Toast.LENGTH_LONG);
+        // Email not empty
+        if (email.isEmpty()) {
+            Toast notificacion = Toast.makeText(this, getString(R.string.email_cant_be_empty), Toast.LENGTH_LONG);
             notificacion.show();
         }
+        // Pass not empty
+        if (pass.isEmpty()) {
+            Toast notificacion = Toast.makeText(this, getString(R.string.pass_cant_be_empty), Toast.LENGTH_LONG);
+            notificacion.show();
+        }
+        // Minimum 6 length
+        if (pass.length()<6) {
+            Toast notificacion= Toast.makeText(this,getString(R.string.pass_must_be_at_least_6_chars), Toast.LENGTH_LONG);
+            notificacion.show();
+        }
+        // Minumum 1 number, 1 uppercase, 1 lowercase, 1 special character
+        if (!pass.matches(".*\\d.*") || !pass.matches(".*[A-Z].*") || !pass.matches(".*[a-z].*")) {
+    Toast notificacion = Toast.makeText(this, getString(R.string.pass_requisites), Toast.LENGTH_LONG);
+    notificacion.show();
+}
         verifyRePassword(v);
     }
 
     public void verifyRePassword(View v)
-{
-    String pass = etPassword.getText().toString();
-    String Repass = etRePassword.getText().toString();
-
-    if (!pass.equals(Repass))
     {
-        Toast notificacion= Toast.makeText(this,"Passwords don't match", Toast.LENGTH_LONG);
-        notificacion.show();
+        String pass = etPassword.getText().toString();
+        String Repass = etRePassword.getText().toString();
+
+        if (!pass.equals(Repass))
+        {
+            Toast notificacion= Toast.makeText(this,getString(R.string.pass_dont_match), Toast.LENGTH_LONG);
+            notificacion.show();
+        }
     }
-}
 }
