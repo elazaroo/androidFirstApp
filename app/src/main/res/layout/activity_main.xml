@@ -16,8 +16,8 @@
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/registerCaps"
-        android:textColor="?android:textColor"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="?android:textColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,11 +28,11 @@
         android:layout_marginTop="170dp"
         android:autofillHints=""
         android:hint="@string/email"
-        android:textColor="?android:textColor"
-        android:textColorHint="?android:textColor"
         android:inputType="textEmailAddress"
         android:padding="16dp"
         android:textAlignment="center"
+        android:textColor="?android:textColor"
+        android:textColorHint="?android:textColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle"
         tools:ignore="VisualLintTextFieldSize" />
@@ -44,11 +44,11 @@
         android:layout_marginTop="20dp"
         android:autofillHints=""
         android:hint="@string/password"
-        android:textColor="?android:textColor"
-        android:textColorHint="?android:textColor"
         android:inputType="textPassword"
         android:padding="16dp"
         android:textAlignment="center"
+        android:textColor="?android:textColor"
+        android:textColorHint="?android:textColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmail"
         tools:ignore="VisualLintTextFieldSize" />
@@ -60,11 +60,11 @@
         android:layout_marginTop="20dp"
         android:autofillHints=""
         android:hint="@string/repeat_password"
-        android:textColor="?android:textColor"
-        android:textColorHint="?android:textColor"
         android:inputType="textPassword"
         android:padding="16dp"
         android:textAlignment="center"
+        android:textColor="?android:textColor"
+        android:textColorHint="?android:textColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
         tools:ignore="VisualLintTextFieldSize" />
@@ -91,6 +91,6 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="VisualLintButtonSize" />
+        tools:ignore="VisualLintButtonSize,TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

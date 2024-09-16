@@ -1,5 +1,6 @@
 package com.example.androidfirstapp;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -10,6 +11,8 @@ import androidx.core.view.WindowInsetsCompat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+
 
 public class MainActivity extends AppCompatActivity
 {
@@ -28,6 +31,11 @@ public class MainActivity extends AppCompatActivity
             etPassword = findViewById(R.id.etPassword);
             etRePassword = findViewById(R.id.etRePassword);
             etEmail = findViewById(R.id.etEmail);
+
+            setHintBehavior(etEmail, R.string.email);
+            setHintBehavior(etPassword, R.string.password);
+            setHintBehavior(etRePassword, R.string.repeat_password);
+
             return insets;
         });
     }
@@ -70,4 +78,20 @@ public class MainActivity extends AppCompatActivity
             notificacion.show();
         }
     }
+
+    private void setHintBehavior(EditText editText, int hintResId) {
+        editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    editText.setHint("");
+                } else {
+                    if (editText.getText().toString().isEmpty()) {
+                        editText.setHint(hintResId);
+                    }
+                }
+            }
+        });
+    }
+
 }
