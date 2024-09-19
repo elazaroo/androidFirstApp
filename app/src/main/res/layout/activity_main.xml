@@ -274,7 +274,7 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/btComma"
+            android:id="@+id/btDot"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -282,7 +282,7 @@
             android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
             android:onClick="pressedButton"
-            android:text=","
+            android:text="."
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -294,6 +294,7 @@
             android:layout_columnWeight="1"
             android:layout_margin="4dp"
             android:backgroundTint="#edb616"
+            android:onClick="equalButtonPressed"
             android:text="="
             android:textColor="@color/white"
             android:textSize="18sp" />
