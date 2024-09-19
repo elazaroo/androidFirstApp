@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    private char lastChar = ' ';
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +30,47 @@ public class MainActivity extends AppCompatActivity {
 
             return insets;
         });
+    }
+
+    public void pressedButton(View view) {
+        TextView tvScreen = view.getRootView().findViewById(R.id.tvScreen);
+        Button button = (Button) view;
+        String buttonText = button.getText().toString();
+
+        if (tvScreen != null) {
+            String currentText = tvScreen.getText().toString();
+            char lastCharInText = currentText.isEmpty() ? ' ' : currentText.charAt(currentText.length() - 1);
+
+            if (isOperator(buttonText.charAt(0))) {
+                if (currentText.isEmpty() || isOperator(lastCharInText)) {
+                    // Don't add the operator if the text is empty or the last character is an operator
+                    return;
+                }
+            }
+
+            tvScreen.append(buttonText);
+            lastChar = buttonText.charAt(0); // Update last character
+        }
+    }
+
+    private boolean isOperator(char c) {
+        return c == '+' || c == '-' || c == 'x' || c == '÷';
+    }
+
+    public void clearAll(View view) {
+        TextView tvScreen = view.getRootView().findViewById(R.id.tvScreen);
+        if (tvScreen != null) {
+            tvScreen.setText("");
+        }
+    }
+
+    public void clearLast(View view) {
+        TextView tvScreen = view.getRootView().findViewById(R.id.tvScreen);
+        if (tvScreen != null) {
+            String currentText = tvScreen.getText().toString();
+            if (!currentText.isEmpty()) {
+                tvScreen.setText(currentText.substring(0, currentText.length() - 1));
+            }
+        }
     }
 }
