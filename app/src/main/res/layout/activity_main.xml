@@ -9,19 +9,23 @@
 
     <TextView
         android:id="@+id/tvScreen"
-        android:layout_width="355dp"
-        android:layout_height="116dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="165dp"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="sans-serif-medium"
         android:text=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="textEnd"
+        android:textSize="34sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="@+id/gridLayout"
         tools:ignore="MissingConstraints" />
 
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="0dp"
-        android:layout_height="390dp"
+        android:layout_height="450dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         android:layout_margin="16dp"
@@ -39,11 +43,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="clearAll"
             android:text="AC"
             android:textColor="#edb616"
-            android:textSize="18sp"
-            android:onClick="clearAll" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btC"
@@ -51,11 +56,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="clearLast"
             android:text="C"
             android:textColor="#edb616"
-            android:textSize="18sp"
-            android:onClick="clearLast" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btPercent"
@@ -63,6 +69,7 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
             android:text="%"
             android:textColor="#edb616"
@@ -74,11 +81,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="÷"
             android:textColor="#edb616"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <!-- Second Row -->
         <Button
@@ -87,11 +95,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="7"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt8"
@@ -99,11 +108,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="8"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt9"
@@ -111,11 +121,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="9"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btMultiply"
@@ -123,11 +134,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="x"
             android:textColor="#edb616"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <!-- Third Row -->
         <Button
@@ -136,11 +148,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="4"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt5"
@@ -148,11 +161,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="5"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt6"
@@ -160,11 +174,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="6"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btMinus"
@@ -172,11 +187,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="-"
             android:textColor="#edb616"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <!-- Fourth Row -->
         <Button
@@ -185,11 +201,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="1"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt2"
@@ -197,11 +214,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="2"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt3"
@@ -209,11 +227,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="3"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btPlus"
@@ -221,11 +240,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="+"
             android:textColor="#edb616"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <!-- Fifth Row -->
         <Button
@@ -234,9 +254,10 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
             android:text=".."
-            android:textColor="@color/white"
+            android:textColor="?attr/colorPrimary"
             android:textSize="18sp" />
 
         <Button
@@ -245,11 +266,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text="0"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btComma"
@@ -257,11 +279,12 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="?attr/colorPrimary"
+            android:onClick="pressedButton"
             android:text=","
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:onClick="pressedButton" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btEqual"
@@ -269,6 +292,7 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="4dp"
             android:backgroundTint="#edb616"
             android:text="="
             android:textColor="@color/white"

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button) view;
         String buttonText = button.getText().toString();
 
-        if (tvScreen != null) {
+        if (tvScreen != null && tvScreen.length() != 16) { // Max 17 chars added
             String currentText = tvScreen.getText().toString();
             char lastCharInText = currentText.isEmpty() ? ' ' : currentText.charAt(currentText.length() - 1);
 
