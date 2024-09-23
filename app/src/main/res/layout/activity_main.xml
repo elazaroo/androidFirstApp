@@ -7,13 +7,68 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/etInput1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="43dp"
+        android:ems="10"
+        android:hint="Input 1"
+        android:inputType="text"
+        android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etInput2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Input 2"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/etInput1"
+        app:layout_constraintTop_toBottomOf="@+id/etInput1" />
+
+    <RadioGroup
+        android:id="@+id/rgType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/etInput1"
+        app:layout_constraintTop_toBottomOf="@+id/etInput2">
+
+        <RadioButton
+            android:id="@+id/rbSum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sum" />
+
+        <RadioButton
+            android:id="@+id/rbRest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rest" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="operate"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/rgType"
+        app:layout_constraintTop_toBottomOf="@+id/rgType" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
