@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:onClick="operate"
-        android:text="Button"
+        android:text="OPERATE"
         app:layout_constraintStart_toStartOf="@+id/etInput1"
         app:layout_constraintTop_toBottomOf="@+id/cbRest" />
 
