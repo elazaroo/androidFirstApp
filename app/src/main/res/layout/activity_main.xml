@@ -32,27 +32,6 @@
         app:layout_constraintStart_toStartOf="@+id/etInput1"
         app:layout_constraintTop_toBottomOf="@+id/etInput1" />
 
-    <RadioGroup
-        android:id="@+id/rgType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/etInput1"
-        app:layout_constraintTop_toBottomOf="@+id/etInput2">
-
-        <RadioButton
-            android:id="@+id/rbSum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sum" />
-
-        <RadioButton
-            android:id="@+id/rbRest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Rest" />
-    </RadioGroup>
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -60,8 +39,8 @@
         android:layout_marginTop="20dp"
         android:onClick="operate"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/rgType"
-        app:layout_constraintTop_toBottomOf="@+id/rgType" />
+        app:layout_constraintStart_toStartOf="@+id/etInput1"
+        app:layout_constraintTop_toBottomOf="@+id/cbRest" />
 
     <TextView
         android:id="@+id/tvResult"
@@ -70,5 +49,23 @@
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <CheckBox
+        android:id="@+id/cbSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Sum"
+        app:layout_constraintStart_toStartOf="@+id/etInput1"
+        app:layout_constraintTop_toBottomOf="@+id/etInput2" />
+
+    <CheckBox
+        android:id="@+id/cbRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Rest"
+        app:layout_constraintStart_toStartOf="@+id/etInput1"
+        app:layout_constraintTop_toBottomOf="@+id/cbSum" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
