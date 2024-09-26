@@ -32,26 +32,17 @@
         app:layout_constraintStart_toStartOf="@+id/etInput1"
         app:layout_constraintTop_toBottomOf="@+id/etInput1" />
 
-    <RadioGroup
-        android:id="@+id/rgType"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/etInput1"
-        app:layout_constraintTop_toBottomOf="@+id/etInput2">
-
-        <RadioButton
-            android:id="@+id/rbSum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sum" />
-
-        <RadioButton
-            android:id="@+id/rbRest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Rest" />
-    </RadioGroup>
+        android:layout_marginEnd="1dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etInput2" />
 
     <Button
         android:id="@+id/button"
@@ -59,9 +50,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:onClick="operate"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/rgType"
-        app:layout_constraintTop_toBottomOf="@+id/rgType" />
+        android:text="OPERATE"
+        app:layout_constraintStart_toStartOf="@+id/etInput1"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <TextView
         android:id="@+id/tvResult"

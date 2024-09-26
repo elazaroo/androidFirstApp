@@ -2,8 +2,9 @@ package com.example.androidfirstapp;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText et1, et2;
     private TextView tv1;
-    private RadioButton r1, r2;
+    private Spinner s1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +28,11 @@ public class MainActivity extends AppCompatActivity {
         et1 = findViewById(R.id.etInput1);
         et2 = findViewById(R.id.etInput2);
         tv1 = findViewById(R.id.tvResult);
-        r1 = findViewById(R.id.rbSum);
-        r2 = findViewById(R.id.rbRest);
+        s1 = findViewById(R.id.spinner);
+
+        String[] options = {"Sumar", "Restar", "Multiplicar", "Dividir"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, options);
+        s1.setAdapter(adapter);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -44,14 +48,23 @@ public class MainActivity extends AppCompatActivity {
         int num1 = Integer.parseInt(val1);
         int num2 = Integer.parseInt(val2);
 
-        if (r1.isChecked()) {
+        String select = s1.getSelectedItem().toString();
+        if (select.equals("Sumar")) {
             int sum = num1 + num2;
-            String result =  String.valueOf(sum);
-            tv1.setText(result);
-        } else if (r2.isChecked()){
-            int rest = num1 - num2;
-            String result =  String.valueOf(rest);
-            tv1.setText(result);
+            tv1.setText("Resultado: " + sum);
+        } else if (select.equals("Restar")) {
+            int res = num1 - num2;
+            tv1.setText("Resultado: " + res);
+        } else if (select.equals("Multiplicar")) {
+            int mul = num1 * num2;
+            tv1.setText("Resultado: " + mul);
+        } else if (select.equals("Dividir")) {
+            if (num2 != 0) {
+                int div = num1 / num2;
+                tv1.setText("Resultado: " + div);
+            } else {
+                tv1.setText("No se puede dividir entre 0");
+            }
         }
     }
 }
