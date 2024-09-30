@@ -7,13 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btSimple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="94dp"
+        android:onClick="toastSimple"
+        android:text="Simple toast"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btUbq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:onClick="toastUbq"
+        android:text="Other ubication"
+        app:layout_constraintStart_toStartOf="@+id/btSimple"
+        app:layout_constraintTop_toBottomOf="@+id/btSimple" />
+
+    <Button
+        android:id="@+id/btCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:onClick="toastCustom"
+        android:text="Custom toast"
+        app:layout_constraintStart_toStartOf="@+id/btSimple"
+        app:layout_constraintTop_toBottomOf="@+id/btUbq" />
 </androidx.constraintlayout.widget.ConstraintLayout>
