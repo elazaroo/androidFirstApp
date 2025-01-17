@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -42,5 +43,13 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Third option selected", Toast.LENGTH_LONG).show();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void hide(View v) {
+        getSupportActionBar().hide();
+    }
+
+    public void show(View v) {
+        getSupportActionBar().show();
     }
 }
