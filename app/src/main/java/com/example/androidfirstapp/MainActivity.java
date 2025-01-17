@@ -43,22 +43,14 @@ public class MainActivity extends AppCompatActivity {
         @SuppressLint("WrongConstant")
         @Override
         protected void onDraw(Canvas canvas) {
-            canvas.drawRGB(0, 0, 255);
+            canvas.drawRGB(255, 255, 255);
             Paint brush1 = new Paint();
-            brush1.setARGB(255, 255, 0, 0);
-            brush1.setTextSize(30);
-            brush1.setTypeface(Typeface.SERIF);
-            canvas.drawText("Hello World (SERIF)", 0, 70, brush1);
-            brush1.setTypeface(Typeface.SANS_SERIF);
-            canvas.drawText("Hello World (SANS SERIF)", 0, 100, brush1);
-            brush1.setTypeface(Typeface.MONOSPACE);
-            canvas.drawText("Hello World (MONOSPACE)", 0, 140, brush1);
-            Typeface tf = Typeface.create(Typeface.SERIF, Typeface.ITALIC);
-            brush1.setTypeface(tf);
-            canvas.drawText("Hello World (SERIF ITALIC)", 0, 180, brush1);
-            tf = Typeface.create(Typeface.SERIF, Typeface.ITALIC | Typeface.BOLD);
-            brush1.setTypeface(tf);
-            canvas.drawText("Hello World (SERIF ITALIC BOLD)", 0, 220, brush1);
+            brush1.setARGB(255, 0, 0, 0);
+            brush1.setTextSize(80);
+            Typeface face = Typeface.createFromAsset(getAssets(),
+                    "Pricedown.ttf");
+            brush1.setTypeface(face);
+            canvas.drawText("Hello World", 0, 120, brush1);
         }
     }
 }
