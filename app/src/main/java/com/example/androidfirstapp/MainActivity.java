@@ -41,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
         if (id==R.id.option3) {
             Toast.makeText(this,"Third option selected", Toast.LENGTH_LONG).show();
         }
+        if (id==R.id.camera){
+            Toast.makeText(this,"Camera selected",Toast.LENGTH_LONG).show();
+        }
+        if (id==R.id.phone){
+            Toast.makeText(this,"Phone selected",Toast.LENGTH_LONG).show();
+        }
         return super.onOptionsItemSelected(item);
     }
 }
