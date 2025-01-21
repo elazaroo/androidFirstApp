@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/beetle1" android:duration="50"/>
+    <item android:drawable="@drawable/beetle2" android:duration="50"/>
+    <item android:drawable="@drawable/beetle3" android:duration="50"/>
+    <item android:drawable="@drawable/beetle4" android:duration="50"/>
+    <item android:drawable="@drawable/beetle5" android:duration="50"/>
+    <item android:drawable="@drawable/beetle6" android:duration="50"/>
+    <item android:drawable="@drawable/beetle7" android:duration="50"/>
+    <item android:drawable="@drawable/beetle8" android:duration="50"/>
+    <item android:drawable="@drawable/beetle9" android:duration="50"/>
+    <item android:drawable="@drawable/beetle10" android:duration="50"/>
+    <item android:drawable="@drawable/beetle11" android:duration="50"/>
+</animation-list>
